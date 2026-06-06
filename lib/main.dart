@@ -19,11 +19,8 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Celular Virtual Pronto!',
-            style: TextStyle(fontSize: 20),
+      home: const WeatherScreen(),
+      debugShowCheckedModeBanner: false,
           ),
         ),
       ),
