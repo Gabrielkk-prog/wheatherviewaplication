@@ -1,4 +1,5 @@
 import 'package:geolocator/geolocator.dart';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 class LocationService {
   Future<Position> getCurrentLocation() async {
@@ -30,7 +31,7 @@ class LocationService {
     } 
     }
   class WeatherService {
-    final String apiKey = 'a851844083ebd257332cb87c3e75e7a2';
+    final String apiKey = '';
     Future<String> getWeather(double latitude, double longitude) async {
       final String url = 'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey';
       final http.Response response = await http.get(Uri.parse(url));
